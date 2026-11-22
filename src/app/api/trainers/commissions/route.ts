@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from "zod";
 import { parseJsonBody } from "@/lib/security/parse-json-body";
 
+const mutatingBodySchema = z.object({
+  commissionId: z.string().min(1),
+  isPaid: z.boolean(),
+});
+
 const createCommissionSchema = z.object({
   trainerId: z.string().min(1),
   memberId: z.string().min(1),

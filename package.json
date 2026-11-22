@@ -21,7 +21,7 @@
   },
   "scripts": {
     "postinstall": "prisma generate",
-    "vercel-build": "prisma generate && next build",
+    "vercel-build": "bash scripts/vercel-build.sh",
     "dev": "next dev --webpack",
     "dev:turbo": "next dev",
     "dev:skip-check": "next dev --webpack",
