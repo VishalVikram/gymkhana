@@ -68,9 +68,12 @@ export async function middleware(request: NextRequest) {
     return withSecurityHeaders(NextResponse.next());
   }
 
+  // Over HTTPS Auth.js stores the session as `__Secure-authjs.session-token`;
+  // getToken defaults to the non-secure name, so tell it which one to read.
   const token = await getToken({
     req: request,
     secret: readEnvVar("NEXTAUTH_SECRET"),
+    secureCookie: request.nextUrl.protocol === "https:",
   });
 
   if (!token) {
