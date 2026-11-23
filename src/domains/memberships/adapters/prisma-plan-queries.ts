@@ -54,6 +54,7 @@ export class PrismaPlanQueries implements IPlanQueries, IPlanCommands {
       durationDays: p.durationDays,
       price: Number(p.price),
       description: p.description,
+      planType: p.planType,
       isActive: p.isActive,
     };
   }

@@ -79,6 +79,7 @@ export async function POST(request: NextRequest) {
         durationDays,
         price,
         description,
+        planType: body.planType === "PT" ? "PT" : "GYM",
         isActive: body.isActive !== false,
       },
     });

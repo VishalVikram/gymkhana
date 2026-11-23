@@ -18,6 +18,7 @@ export async function updatePlanHandler(
       durationDays?: number;
       price?: number;
       description?: string | null;
+      planType?: "GYM" | "PT";
       isActive?: boolean;
     } = {};
 
@@ -35,6 +36,9 @@ export async function updatePlanHandler(
         body.description === "" || body.description == null
           ? null
           : String(body.description);
+    }
+    if (body.planType === "GYM" || body.planType === "PT") {
+      data.planType = body.planType;
     }
     if (typeof body.isActive === "boolean") {
       data.isActive = body.isActive;

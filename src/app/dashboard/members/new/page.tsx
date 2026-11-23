@@ -55,10 +55,23 @@ function NewMemberForm() {
     monthlyRate: "",
     studentOrGymfloPlan: false,
     specialOccasion: "",
-    // Admission fees (default values from March 10, 2026)
+    // Admission fee: replaced by the gym's Settings value once loaded
     admissionFee: "800",
     personalTrainingFee: "0",
   });
+
+  useEffect(() => {
+    // Default the admission fee from Settings → Gym profile (falls back to the form default).
+    fetch("/api/gym/profile")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((profile) => {
+        const fee = Number(profile?.chargeAdmissionFee);
+        if (Number.isFinite(fee) && fee >= 0) {
+          setFormData((prev) => ({ ...prev, admissionFee: String(fee) }));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     fetchPlans();
@@ -361,10 +374,10 @@ function NewMemberForm() {
             </div>
 
             <div className="md:col-span-2">
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-4">
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/40 dark:to-purple-950/40 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-foreground">Total Amount:</span>
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                     ₹{calculateTotalAmount().toLocaleString('en-IN')}
                   </span>
                 </div>

@@ -242,8 +242,8 @@ export default function SettingsPage() {
       const url = planForm.id ? `/api/plans/${planForm.id}` : "/api/plans";
       const method = planForm.id ? "PUT" : "POST";
       const body = planForm.id
-        ? { name: planForm.name, durationDays: planForm.durationDays, price: planForm.price, description: planForm.description || null, isActive: planForm.isActive !== false }
-        : { name: planForm.name, durationDays: planForm.durationDays, price: planForm.price, description: planForm.description || null };
+        ? { name: planForm.name, durationDays: planForm.durationDays, price: planForm.price, description: planForm.description || null, planType: planForm.planType || 'GYM', isActive: planForm.isActive !== false }
+        : { name: planForm.name, durationDays: planForm.durationDays, price: planForm.price, description: planForm.description || null, planType: planForm.planType || 'GYM' };
       const res = await fetch(url, { method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
       if (res.ok) {
         setPlanForm(null);
@@ -646,7 +646,7 @@ export default function SettingsPage() {
                     <span className="text-sm font-normal text-muted-foreground">({plans.filter(p => p.planType === 'GYM').length})</span>
                   </h3>
                   <div className="space-y-4">
-                    {[30, 90, 180, 365].map(duration => {
+                    {Array.from(new Set(plans.filter(p => p.planType === 'GYM').map(p => p.durationDays))).sort((a, b) => a - b).map(duration => {
                       const durationPlans = plans
                         .filter(p => p.planType === 'GYM' && p.durationDays === duration)
                         .sort((a, b) => Number(a.price) - Number(b.price));
@@ -662,7 +662,8 @@ export default function SettingsPage() {
                       const durationLabel = 
                         duration === 30 ? 'Monthly' :
                         duration === 90 ? '3 Months' :
-                        duration === 180 ? '6 Months' : '12 Months';
+                        duration === 180 ? '6 Months' :
+                        duration === 365 ? '12 Months' : 'Custom';
                       
                       return (
                         <div key={duration} className={`rounded-lg border-l-4 ${durationColor.border} ${durationColor.bg} p-3`}>
@@ -718,7 +719,7 @@ export default function SettingsPage() {
                     <span className="text-sm font-normal text-muted-foreground">({plans.filter(p => p.planType === 'PT').length})</span>
                   </h3>
                   <div className="space-y-4">
-                    {[30, 90, 180, 365].map(duration => {
+                    {Array.from(new Set(plans.filter(p => p.planType === 'PT').map(p => p.durationDays))).sort((a, b) => a - b).map(duration => {
                       const durationPlans = plans
                         .filter(p => p.planType === 'PT' && p.durationDays === duration)
                         .sort((a, b) => Number(a.price) - Number(b.price));
@@ -734,7 +735,8 @@ export default function SettingsPage() {
                       const durationLabel = 
                         duration === 30 ? 'Monthly' :
                         duration === 90 ? '3 Months' :
-                        duration === 180 ? '6 Months' : '12 Months';
+                        duration === 180 ? '6 Months' :
+                        duration === 365 ? '12 Months' : 'Custom';
                       
                       return (
                         <div key={duration} className={`rounded-lg border-l-4 ${durationColor.border} ${durationColor.bg} p-3`}>

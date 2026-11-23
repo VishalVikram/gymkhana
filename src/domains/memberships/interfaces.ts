@@ -21,6 +21,7 @@ export type UpdatePlanInputDTO = {
   durationDays?: number;
   price?: number;
   description?: string | null;
+  planType?: "GYM" | "PT";
   isActive?: boolean;
 };
 
