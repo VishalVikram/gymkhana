@@ -383,7 +383,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 placeholder="Search expenses..."
                 value={filters.search}
                 onChange={(e) => onFiltersChange({ ...filters, search: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
               />
             </div>
             <div>
@@ -393,7 +393,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 onChange={(e) =>
                   onFiltersChange({ ...filters, category: e.target.value as ExpenseCategory | "" })
                 }
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               >
                 <option value="">All Categories</option>
                 {Object.values(ExpenseCategory).map((cat) => (
@@ -410,7 +410,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 onChange={(e) =>
                   onFiltersChange({ ...filters, type: e.target.value as ExpenseType | "" })
                 }
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               >
                 <option value="">All Types</option>
                 <option value="RECURRING">Recurring</option>
@@ -424,7 +424,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 onChange={(e) =>
                   onFiltersChange({ ...filters, status: e.target.value as ExpenseStatus | "" })
                 }
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               >
                 <option value="">All Statuses</option>
                 <option value="PENDING">Pending</option>
@@ -438,7 +438,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 type="date"
                 value={filters.startDate}
                 onChange={(e) => onFiltersChange({ ...filters, startDate: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               />
             </div>
             <div>
@@ -447,7 +447,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 type="date"
                 value={filters.endDate}
                 onChange={(e) => onFiltersChange({ ...filters, endDate: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               />
             </div>
           </div>
@@ -614,7 +614,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                     required
                     value={expenseForm.description}
                     onChange={(e) => setExpenseForm({ ...expenseForm, description: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -626,7 +626,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                       onChange={(e) =>
                         setExpenseForm({ ...expenseForm, category: e.target.value as ExpenseCategory })
                       }
-                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                     >
                       {Object.values(ExpenseCategory).map((cat) => (
                         <option key={cat} value={cat}>
@@ -643,7 +643,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                       onChange={(e) =>
                         setExpenseForm({ ...expenseForm, type: e.target.value as ExpenseType })
                       }
-                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                     >
                       <option value="ONE_TIME">One Time</option>
                       <option value="RECURRING">Recurring</option>
@@ -658,7 +658,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                     required
                     value={expenseForm.amount}
                     onChange={(e) => setExpenseForm({ ...expenseForm, amount: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 {expenseForm.type === "RECURRING" ? (
@@ -677,7 +677,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                             paymentDate: newStartDate,
                           });
                         }}
-                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                       />
                       <p className="text-xs text-muted-foreground text-muted-foreground mt-1">
                         First payment date (can be in the past)
@@ -689,7 +689,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                         type="date"
                         value={expenseForm.endDate}
                         onChange={(e) => setExpenseForm({ ...expenseForm, endDate: e.target.value })}
-                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                       />
                       <p className="text-xs text-muted-foreground text-muted-foreground mt-1">
                         Leave empty to create entries until today
@@ -706,7 +706,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                             frequency: e.target.value as "MONTHLY" | "QUARTERLY" | "YEARLY",
                           })
                         }
-                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                       >
                         <option value="MONTHLY">Monthly</option>
                         <option value="QUARTERLY">Quarterly</option>
@@ -721,7 +721,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                           onChange={(e) =>
                             setExpenseForm({ ...expenseForm, createPastEntries: e.target.checked })
                           }
-                          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-border rounded"
+                          className="h-4 w-4 text-blue-600 focus:ring-ring border-border rounded"
                         />
                         <label htmlFor="createPastEntries" className="text-sm font-medium text-foreground cursor-pointer">
                           Create entries for past periods (e.g., if start date is Jan 2025, create entries for Jan, Feb, Mar, etc.)
@@ -734,7 +734,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                         type="date"
                         value={expenseForm.nextDueDate}
                         onChange={(e) => setExpenseForm({ ...expenseForm, nextDueDate: e.target.value })}
-                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                        className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                       />
                       <p className="text-xs text-muted-foreground text-muted-foreground mt-1">
                         Next payment due date (for tracking future payments)
@@ -749,7 +749,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                       required
                       value={expenseForm.paymentDate}
                       onChange={(e) => setExpenseForm({ ...expenseForm, paymentDate: e.target.value })}
-                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                      className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                     />
                   </div>
                 )}
@@ -761,7 +761,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                     onChange={(e) =>
                       setExpenseForm({ ...expenseForm, method: e.target.value as PaymentMethod })
                     }
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   >
                     {Object.values(PaymentMethod).map((method) => (
                       <option key={method} value={method}>
@@ -776,7 +776,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                     type="text"
                     value={expenseForm.vendor}
                     onChange={(e) => setExpenseForm({ ...expenseForm, vendor: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div>
@@ -785,7 +785,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                     type="text"
                     value={expenseForm.reference}
                     onChange={(e) => setExpenseForm({ ...expenseForm, reference: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div>
@@ -793,7 +793,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                   <Textarea
                     value={expenseForm.notes}
                     onChange={(e) => setExpenseForm({ ...expenseForm, notes: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                     rows={3}
                   />
                 </div>

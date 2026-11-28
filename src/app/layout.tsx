@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { LoadingBar } from "@/components/ui/loading-bar";
@@ -9,7 +9,11 @@ import { APP_NAME, APP_TITLE, APP_DESCRIPTION } from "@/lib/site-config";
 
 const logger = createLogger("app");
 
-const inter = Inter({ subsets: ["latin"] });
+const brandFont = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: APP_TITLE,
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
     title: APP_NAME,
   },
   icons: {
-    apple: "/icon-192x192.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -45,7 +49,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={brandFont.className}>
         <LoadingBar />
         <Providers>
           {children}

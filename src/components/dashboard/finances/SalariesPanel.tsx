@@ -182,7 +182,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
               <SelectNative
                 value={filters.employeeId}
                 onChange={(e) => onFiltersChange({ ...filters, employeeId: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               >
                 <option value="">All Employees</option>
                 {employees.map((emp) => (
@@ -199,7 +199,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                 placeholder="e.g., 2025"
                 value={filters.year}
                 onChange={(e) => onFiltersChange({ ...filters, year: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
               />
             </div>
             <div>
@@ -211,7 +211,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                 max="12"
                 value={filters.month}
                 onChange={(e) => onFiltersChange({ ...filters, month: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium placeholder:text-muted-foreground"
               />
             </div>
             <div>
@@ -220,7 +220,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                 type="date"
                 value={filters.startDate}
                 onChange={(e) => onFiltersChange({ ...filters, startDate: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               />
             </div>
             <div>
@@ -229,7 +229,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                 type="date"
                 value={filters.endDate}
                 onChange={(e) => onFiltersChange({ ...filters, endDate: e.target.value })}
-                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-white bg-background text-foreground font-medium"
+                className="w-full px-4 py-2.5 border border-input rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all bg-white bg-background text-foreground font-medium"
               />
             </div>
           </div>
@@ -354,7 +354,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                     required
                     value={salaryForm.employeeId}
                     onChange={(e) => setSalaryForm({ ...salaryForm, employeeId: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   >
                     <option value="">Select Employee</option>
                     {employees.map((emp) => (
@@ -372,7 +372,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                     required
                     value={salaryForm.amount}
                     onChange={(e) => setSalaryForm({ ...salaryForm, amount: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div>
@@ -382,7 +382,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                     required
                     value={salaryForm.paymentDate}
                     onChange={(e) => setSalaryForm({ ...salaryForm, paymentDate: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div>
@@ -391,7 +391,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                     required
                     value={salaryForm.method}
                     onChange={(e) => setSalaryForm({ ...salaryForm, method: e.target.value as PaymentMethod })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   >
                     {Object.values(PaymentMethod).map((method) => (
                       <option key={method} value={method}>
@@ -406,7 +406,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                     type="text"
                     value={salaryForm.reference}
                     onChange={(e) => setSalaryForm({ ...salaryForm, reference: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                   />
                 </div>
                 <div>
@@ -414,7 +414,7 @@ export const SalariesPanel = forwardRef<SalariesPanelHandle, SalariesPanelProps>
                   <Textarea
                     value={salaryForm.notes}
                     onChange={(e) => setSalaryForm({ ...salaryForm, notes: e.target.value })}
-                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-blue-500 bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring bg-background text-foreground"
                     rows={3}
                   />
                 </div>

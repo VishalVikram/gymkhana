@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { formatCurrency } from "@/lib/utils";
 import { DEFAULT_SUPPLEMENT_HSN } from "@/lib/commerce/gst";
+import { APP_NAME } from "@/lib/site-config";
 
 const fetcher = (url: string) =>
   fetch(url).then((r) => {
@@ -173,7 +174,7 @@ export default function SupplementsPage() {
 
       <Card className="border-amber-500/30 bg-amber-500/5">
         <CardContent className="pt-4 text-sm text-muted-foreground">
-          <strong className="text-foreground">Compliance:</strong> Fitness360 does not
+          <strong className="text-foreground">Compliance:</strong> {APP_NAME} does not
           scrape Amazon or display price comparisons. Paste an Amazon.in URL only
           after your staff verify the listing. Members see the same link in the
           member app when they open a product — not automatic price checks.

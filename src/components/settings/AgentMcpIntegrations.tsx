@@ -471,7 +471,7 @@ export function AgentMcpIntegrations() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={connect.qrImageUrl}
-                    alt="QR code to Fitness360 AI setup"
+                    alt="QR code to AI assistant setup"
                     width={220}
                     height={220}
                     className="rounded-md border bg-white"

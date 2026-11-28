@@ -39,67 +39,65 @@
 
 :root {
   --radius: 0.5rem;
-  /* Sidebar - light neutral */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 9%;
-  --sidebar-primary: 0 0% 9%;
-  --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 9%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 63%;
-  /* Light mode - neutral grey theme */
+  /* Bhoomi Fitness - light mode (white surfaces, deep-gold accents for contrast) */
+  --sidebar-background: 40 20% 98%;
+  --sidebar-foreground: 225 23% 8%;
+  --sidebar-primary: 38 55% 36%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 40 30% 93%;
+  --sidebar-accent-foreground: 225 23% 8%;
+  --sidebar-border: 40 15% 88%;
+  --sidebar-ring: 38 55% 36%;
   --background: 0 0% 100%;
-  --foreground: 0 0% 9%;
+  --foreground: 225 23% 8%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
+  --card-foreground: 225 23% 8%;
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 9%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 9%;
+  --popover-foreground: 225 23% 8%;
+  --primary: 38 55% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 25% 95%;
+  --secondary-foreground: 225 23% 8%;
+  --muted: 40 20% 96%;
+  --muted-foreground: 225 8% 40%;
+  --accent: 40 30% 93%;
+  --accent-foreground: 225 23% 8%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 63%;
+  --border: 40 15% 88%;
+  --input: 40 15% 85%;
+  --ring: 38 55% 36%;
 }
 
 .dark {
-  /* Sidebar - dark neutral */
-  --sidebar-background: 0 0% 9%;
-  --sidebar-foreground: 0 0% 98%;
-  --sidebar-primary: 0 0% 98%;
-  --sidebar-primary-foreground: 0 0% 9%;
-  --sidebar-accent: 0 0% 15%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-border: 0 0% 15%;
-  --sidebar-ring: 0 0% 63%;
-  /* Dark mode - neutral grey/black theme */
-  --background: 0 0% 9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 15%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 15%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 15%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 70%;
-  --accent: 0 0% 15%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  /* Bhoomi Fitness - brand black (#050608 family) with gold (#C5A059) */
+  --sidebar-background: 225 23% 4%;
+  --sidebar-foreground: 40 20% 96%;
+  --sidebar-primary: 39 48% 56%;
+  --sidebar-primary-foreground: 225 23% 3%;
+  --sidebar-accent: 224 22% 10%;
+  --sidebar-accent-foreground: 40 45% 86%;
+  --sidebar-border: 224 16% 13%;
+  --sidebar-ring: 39 48% 56%;
+  --background: 225 23% 5%;
+  --foreground: 40 20% 96%;
+  --card: 223 24% 8%;
+  --card-foreground: 40 20% 96%;
+  --popover: 223 24% 9%;
+  --popover-foreground: 40 20% 96%;
+  --primary: 39 48% 56%;
+  --primary-foreground: 225 23% 3%;
+  --secondary: 224 22% 12%;
+  --secondary-foreground: 40 20% 96%;
+  --muted: 224 22% 11%;
+  --muted-foreground: 222 10% 68%;
+  --accent: 224 22% 12%;
+  --accent-foreground: 40 20% 96%;
+  --destructive: 0 62.8% 45%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 27%;
-  --input: 0 0% 27%;
-  --ring: 0 0% 63%;
+  --border: 224 16% 17%;
+  --input: 224 16% 19%;
+  --ring: 39 48% 56%;
 }
 
 @layer base {

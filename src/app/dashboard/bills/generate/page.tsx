@@ -207,7 +207,7 @@ export default function GenerateBillPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Type to search..."
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 disabled={!!selectedMember}
               />
               {searching && (
@@ -272,7 +272,7 @@ export default function GenerateBillPage() {
               <SelectNative
                 value={formData.programType}
                 onChange={(e) => setFormData({ ...formData, programType: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 {PROGRAM_TYPES.map((type) => (
                   <option key={type.value} value={type.value}>
@@ -292,7 +292,7 @@ export default function GenerateBillPage() {
               <SelectNative
                 value={formData.paymentMethod}
                 onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 {PAYMENT_METHODS.map((method) => (
                   <option key={method.value} value={method.value}>
@@ -313,7 +313,7 @@ export default function GenerateBillPage() {
                 onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
                 disabled={formData.hideAmount}
                 placeholder="Enter amount"
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -324,7 +324,7 @@ export default function GenerateBillPage() {
               <SelectNative
                 value={formData.month}
                 onChange={(e) => setFormData({ ...formData, month: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 {MONTHS.map((month) => (
                   <option key={month} value={month}>
@@ -339,7 +339,7 @@ export default function GenerateBillPage() {
                 <CheckboxInput
                   checked={formData.hideAmount}
                   onChange={(e) => setFormData({ ...formData, hideAmount: e.target.checked })}
-                  className="w-4 h-4 text-blue-600 border-border rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-blue-600 border-border rounded focus:ring-ring"
                 />
                 <span className="text-sm font-semibold text-foreground">
                   Hide Amount (for friends & family)
@@ -365,7 +365,7 @@ export default function GenerateBillPage() {
                 type="date"
                 value={formData.validFrom}
                 onChange={(e) => setFormData({ ...formData, validFrom: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             </div>
 
@@ -377,7 +377,7 @@ export default function GenerateBillPage() {
                 type="date"
                 value={formData.validTo}
                 onChange={(e) => setFormData({ ...formData, validTo: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             </div>
 
@@ -389,7 +389,7 @@ export default function GenerateBillPage() {
                 type="date"
                 value={formData.nextPaymentDate}
                 onChange={(e) => setFormData({ ...formData, nextPaymentDate: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             </div>
           </div>
@@ -404,7 +404,7 @@ export default function GenerateBillPage() {
             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
             rows={3}
             placeholder="Any additional notes or comments..."
-            className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+            className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
           />
         </div>
 

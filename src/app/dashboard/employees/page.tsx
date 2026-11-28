@@ -461,7 +461,7 @@ export default function EmployeesPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent bg-background text-foreground"
                   />
                 </div>
 
@@ -477,7 +477,7 @@ export default function EmployeesPage() {
                       setFormData({ ...formData, contactNumber: e.target.value })
                     }
                     placeholder="Enter contact number"
-                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent bg-background text-foreground"
                   />
                 </div>
 
@@ -493,7 +493,7 @@ export default function EmployeesPage() {
                       setFormData({ ...formData, password: e.target.value })
                     }
                     placeholder={editingUser ? "Leave blank to keep current" : "Gympass@123!"}
-                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent bg-background text-foreground"
                   />
                 </div>
 
@@ -509,7 +509,7 @@ export default function EmployeesPage() {
                         role: e.target.value as "ADMIN" | "SUB_ADMIN",
                       })
                     }
-                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-background text-foreground"
+                    className="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent bg-background text-foreground"
                   >
                     <option value="SUB_ADMIN">Employee</option>
                     <option value="ADMIN">Admin</option>
@@ -523,7 +523,7 @@ export default function EmployeesPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, isActive: e.target.checked })
                     }
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-border rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-ring border-border rounded"
                   />
                   <label
                     htmlFor="isActive"

@@ -251,8 +251,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/dashboard">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <span className="text-lg">💪</span>
+                <div
+                  className="flex aspect-square size-8 items-center justify-center rounded-lg border border-primary/60 bg-primary/10 text-sm font-extrabold text-primary"
+                  aria-hidden
+                >
+                  {APP_NAME.trim().charAt(0).toUpperCase()}
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">{APP_NAME}</span>

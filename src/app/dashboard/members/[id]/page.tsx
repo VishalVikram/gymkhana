@@ -371,7 +371,7 @@ export default function MemberDetailPage() {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             ) : editingField === "name" ? (
               <div className="flex items-center gap-2">
@@ -380,7 +380,7 @@ export default function MemberDetailPage() {
                   required
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 />
                 <Button
@@ -424,7 +424,7 @@ export default function MemberDetailPage() {
                 required
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             ) : editingField === "phone" ? (
               <div className="flex items-center gap-2">
@@ -433,7 +433,7 @@ export default function MemberDetailPage() {
                   required
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 />
                 <Button
@@ -473,7 +473,7 @@ export default function MemberDetailPage() {
               <SelectNative
                 value={formData.gender}
                 onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="">Select Gender</option>
                 <option value="MALE">Male</option>
@@ -485,7 +485,7 @@ export default function MemberDetailPage() {
                 <SelectNative
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 >
                   <option value="">Select Gender</option>
@@ -533,7 +533,7 @@ export default function MemberDetailPage() {
                 type="date"
                 value={formData.dateOfBirth}
                 onChange={(e) => setFormData({ ...formData, dateOfBirth: e.target.value })}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             ) : editingField === "dateOfBirth" ? (
               <div className="flex items-center gap-2">
@@ -541,7 +541,7 @@ export default function MemberDetailPage() {
                   type="date"
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 />
                 <Button
@@ -585,7 +585,7 @@ export default function MemberDetailPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, status: e.target.value as MemberStatus })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="ACTIVE">Active</option>
                 <option value="EXPIRED">Expired</option>
@@ -595,7 +595,7 @@ export default function MemberDetailPage() {
                 <SelectNative
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 >
                   <option value="ACTIVE">Active</option>
@@ -649,7 +649,7 @@ export default function MemberDetailPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, emergencyContact: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             ) : editingField === "emergencyContact" ? (
               <div className="flex items-center gap-2">
@@ -657,7 +657,7 @@ export default function MemberDetailPage() {
                   type="tel"
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
-                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="flex-1 px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 />
                 <Button
@@ -702,7 +702,7 @@ export default function MemberDetailPage() {
                   type="date"
                   value={dateToFix}
                   onChange={(e) => setDateToFix(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium text-sm"
+                  className="flex-1 px-3 py-2 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium text-sm"
                 />
                 <Button
                   onClick={() => handleFixDate("joinDate")}
@@ -745,7 +745,7 @@ export default function MemberDetailPage() {
                 value={formData.address}
                 onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                 rows={3}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             ) : editingField === "address" ? (
               <div className="flex flex-col gap-2">
@@ -753,7 +753,7 @@ export default function MemberDetailPage() {
                   value={fieldValue}
                   onChange={(e) => setFieldValue(e.target.value)}
                   rows={3}
-                  className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                  className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                   autoFocus
                 />
                 <div className="flex items-center gap-2">
@@ -886,7 +886,7 @@ export default function MemberDetailPage() {
                     type="date"
                     value={dateToFix}
                     onChange={(e) => setDateToFix(e.target.value)}
-                    className="flex-1 px-2 py-1.5 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
+                    className="flex-1 px-2 py-1.5 border border-border rounded-lg focus:ring-2 focus:ring-ring text-sm"
                   />
                   <Button
                     onClick={() => handleFixDate("membershipStartDate")}
@@ -930,7 +930,7 @@ export default function MemberDetailPage() {
                     type="date"
                     value={dateToFix}
                     onChange={(e) => setDateToFix(e.target.value)}
-                    className="flex-1 px-2 py-1.5 border border-border rounded-lg focus:ring-2 focus:ring-blue-500 text-sm"
+                    className="flex-1 px-2 py-1.5 border border-border rounded-lg focus:ring-2 focus:ring-ring text-sm"
                   />
                   <Button
                     onClick={() => handleFixDate("membershipEndDate")}

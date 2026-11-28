@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { APP_NAME, MARKETING_SITE_URL, MARKETING_SITE_LABEL } from "@/lib/site-config";
+import { APP_NAME } from "@/lib/site-config";
 import type { LegalSection } from "@/lib/legal/content";
 import { LEGAL_LAST_UPDATED } from "@/lib/legal/content";
 
@@ -14,12 +14,9 @@ export function LegalPageLayout({ title, description, sections }: LegalPageLayou
     <div className="min-h-screen flex flex-col bg-background">
       <header className="border-b border-border/50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-6 flex items-center justify-between gap-4">
-          <a
-            href={MARKETING_SITE_URL}
-            className="text-sm font-semibold text-foreground hover:underline"
-          >
-            ← {MARKETING_SITE_LABEL}
-          </a>
+          <Link href="/" className="text-sm font-semibold text-foreground hover:underline">
+            ← {APP_NAME}
+          </Link>
           <nav className="flex gap-4 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground">
               Privacy

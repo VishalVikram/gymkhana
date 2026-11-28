@@ -193,7 +193,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="John Doe"
               />
             </div>
@@ -209,7 +209,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="+91 98765 43210"
               />
             </div>
@@ -226,7 +226,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, gender: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="">Select Gender</option>
                 <option value="MALE">Male</option>
@@ -245,7 +245,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, dateOfBirth: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             </div>
 
@@ -259,7 +259,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, emergencyContact: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="+91 98765 43210"
               />
             </div>
@@ -274,7 +274,7 @@ function NewMemberForm() {
                   setFormData({ ...formData, address: e.target.value })
                 }
                 rows={3}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="Full address"
               />
             </div>
@@ -297,7 +297,7 @@ function NewMemberForm() {
               <SelectNative
                 value={formData.planId}
                 onChange={(e) => handlePlanChange(e.target.value)}
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="">Choose a plan</option>
                 {plans.map((plan) => (
@@ -319,7 +319,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, startDate: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               />
             </div>
 
@@ -334,7 +334,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, amount: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="0"
               />
             </div>
@@ -350,7 +350,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, admissionFee: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="800"
               />
               <p className="text-xs text-muted-foreground mt-1">Default: ₹800 (from March 10, 2026)</p>
@@ -366,7 +366,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, personalTrainingFee: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="0"
                 disabled={!formData.isPersonalTrainer}
               />
@@ -410,7 +410,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, paymentMethod: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="UPI">UPI</option>
                 <option value="CASH">Cash</option>
@@ -430,7 +430,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, paymentReference: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="Transaction ID or reference number"
               />
             </div>
@@ -455,7 +455,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, packageDuration: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="">Select Duration</option>
                 <option value="monthly">Monthly</option>
@@ -475,7 +475,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, monthlyRate: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
                 placeholder="e.g., 699, 799"
               />
             </div>
@@ -489,7 +489,7 @@ function NewMemberForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, specialOccasion: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-background font-medium"
+                className="w-full px-4 py-2 border border-border rounded-xl focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 bg-background font-medium"
               >
                 <option value="">None</option>
                 <option value="Durga Puja">Durga Puja</option>
@@ -509,7 +509,7 @@ function NewMemberForm() {
                   <CheckboxInput
                     checked={formData.isPersonalTrainer}
                     onChange={(e) => handlePersonalTrainerChange(e.target.checked)}
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-blue-500"
+                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
                   />
                   <span className="text-sm text-foreground font-medium">
                     Personal Trainer (PT) - ₹2,000
@@ -521,7 +521,7 @@ function NewMemberForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, friendsFamilyDiscount: e.target.checked })
                     }
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-blue-500"
+                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
                   />
                   <span className="text-sm text-foreground font-medium">Friends & Family Discount</span>
                 </label>
@@ -531,9 +531,9 @@ function NewMemberForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, studentOrGymfloPlan: e.target.checked })
                     }
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-blue-500"
+                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
                   />
-                  <span className="text-sm text-foreground font-medium">Student / Fitness360 Plan (2 people)</span>
+                  <span className="text-sm text-foreground font-medium">Student / Duo Plan (2 people)</span>
                 </label>
               </div>
             </div>

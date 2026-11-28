@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal/legal-page-layout";
 import { privacySections } from "@/lib/legal/content";
+import { APP_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Fitness360",
-  description: "How Fitness360 collects, uses, and protects personal and member data.",
+  title: `Privacy Policy | ${APP_NAME}`,
+  description: `How ${APP_NAME} collects, uses, and protects personal and member data.`,
 };
 
 export default function PrivacyPage() {

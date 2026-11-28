@@ -1,5 +1,7 @@
 "use client";
 
+import { APP_NAME } from "@/lib/site-config";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -70,7 +72,7 @@ export type AssistantChatProps = {
 export function AssistantChat({
   context,
   client,
-  welcomeMessage = "Hi — I'm Fitness360 AI. Ask about renewals, revenue, members, or draft a WhatsApp. I won't send messages or record payments without your confirmation.",
+  welcomeMessage = `Hi — I'm ${APP_NAME} AI. Ask about renewals, revenue, members, or draft a WhatsApp. I won't send messages or record payments without your confirmation.`,
   quickPrompts = DEFAULT_PROMPTS,
   subtitle,
 }: AssistantChatProps) {
@@ -170,7 +172,7 @@ export function AssistantChat({
         <div>
           <h2 className="text-lg font-semibold flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-orange-400" />
-            Fitness360 AI
+            {APP_NAME} AI
           </h2>
           <p className="text-sm text-muted-foreground mt-1">{resolvedSubtitle}</p>
         </div>
