@@ -14,6 +14,7 @@ import {
   Dumbbell,
   Trophy,
   ClipboardCheck,
+  Fingerprint,
   BarChart3,
   AlertCircle,
   Store,
@@ -180,6 +181,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           title: "Attendance",
           url: "/dashboard/attendance",
           icon: ClipboardCheck,
+        },
+        {
+          title: "Biometric door",
+          url: "/dashboard/attendance/door",
+          icon: Fingerprint,
         },
         {
           title: "Workouts",

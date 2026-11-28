@@ -172,8 +172,73 @@ model Gym {
   CustomEntityRecord   CustomEntityRecord[]
   CustomAnalyticsDefinition CustomAnalyticsDefinition[]
   Setting               Setting[]
+  BiometricDevice       BiometricDevice[]
+  BiometricUser         BiometricUser[]
 
   @@index([accountId])
+}
+
+/// Biometric door device (eSSL / ZKTeco "ADMS" push protocol, /iclock/*). Identified by serial number.
+model BiometricDevice {
+  id           String             @id @default(cuid())
+  gymId        String             @db.Uuid
+  serialNumber String             @unique
+  name         String
+  lastSeenAt   DateTime?
+  lastSyncAt   DateTime?
+  lastIp       String?
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  Gym          Gym                @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  Commands     BiometricCommand[]
+
+  @@index([gymId])
+}
+
+/// A member's numeric user ID on the door devices, and whether door access is currently pushed.
+model BiometricUser {
+  id            String              @id @default(cuid())
+  gymId         String              @db.Uuid
+  memberId      String              @unique
+  pin           Int
+  accessGranted Boolean             @default(false)
+  validUntil    DateTime?           @db.Date
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  Gym           Gym                 @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  Member        Member              @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  Templates     BiometricTemplate[]
+
+  @@unique([gymId, pin])
+  @@index([gymId])
+}
+
+/// Fingerprint / face template captured from a device, kept so access can be restored after renewal.
+model BiometricTemplate {
+  id              String        @id @default(cuid())
+  biometricUserId String
+  tableName       String
+  slot            String
+  data            String        @db.Text
+  updatedAt       DateTime      @updatedAt
+  BiometricUser   BiometricUser @relation(fields: [biometricUserId], references: [id], onDelete: Cascade)
+
+  @@unique([biometricUserId, tableName, slot])
+}
+
+/// Queued command for a device; delivered on its next /iclock/getrequest poll.
+model BiometricCommand {
+  id          Int             @id @default(autoincrement())
+  deviceId    String
+  command     String          @db.Text
+  status      String          @default("PENDING")
+  returnCode  Int?
+  createdAt   DateTime        @default(now())
+  sentAt      DateTime?
+  completedAt DateTime?
+  Device      BiometricDevice @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+
+  @@index([deviceId, status])
 }
 
 enum CustomFieldType {
@@ -513,6 +578,7 @@ model Member {
   DietPlanAssignment   DietPlanAssignment[]
   OrderLine            OrderLine[]
   SupplementGstInvoice SupplementGstInvoice[]
+  BiometricUser        BiometricUser?
   Gym                  Gym                    @relation(fields: [gymId], references: [id], onDelete: Restrict)
 
   @@unique([gymId, phone])

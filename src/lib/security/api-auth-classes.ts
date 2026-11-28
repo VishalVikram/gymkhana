@@ -37,6 +37,8 @@ const PUBLIC_API_PREFIXES = [
   "/api/inngest",
   "/api/assistant",
   "/api/public",
+  // Biometric door devices (ADMS push); trusted by registered serial number in the route.
+  "/iclock/",
 ] as const;
 
 export function classifyRoute(pathname: string): ApiAuthClassValue {
