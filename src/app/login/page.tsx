@@ -3,6 +3,7 @@
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense, useState } from "react";
 import { Eye, EyeOff, Loader2, Lock, MapPin, Phone, User } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -257,6 +258,16 @@ function LoginForm() {
             </button>
           </form>
 
+          <p className="mt-6 text-center text-sm text-white/55">
+            New here?{" "}
+            <Link
+              href={`/signup${callbackUrl !== "/dashboard" ? `?callbackUrl=${encodeURIComponent(callbackUrl)}` : ""}`}
+              className="font-semibold text-[#4C94FF] transition-colors hover:text-[#8DB9FF]"
+            >
+              Create an account
+            </Link>
+          </p>
+
           {/* Gym contact (mobile; desktop shows it on the photo) */}
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/50 lg:hidden">
             <span className="inline-flex items-center gap-1.5">
@@ -269,7 +280,7 @@ function LoginForm() {
         </div>
 
         <p className="mx-auto mt-10 w-full max-w-sm text-xs text-white/30 lg:mt-16">
-          © {new Date().getFullYear()} {GYM.name} · Staff access only
+          © {new Date().getFullYear()} {GYM.name}
         </p>
       </section>
     </div>

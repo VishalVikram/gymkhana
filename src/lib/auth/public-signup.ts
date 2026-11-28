@@ -1,8 +1,8 @@
 /**
  * Public self sign-up creates a brand-new owner account and gym.
- * Single-gym deployments (e.g. Bhoomi Fitness) keep it off; staff are added
- * from Settings → Team & access. Set ALLOW_PUBLIC_SIGNUP="true" to reopen it.
+ * On by default (Bhoomi Fitness asked for a sign-up option on the login page).
+ * Set ALLOW_PUBLIC_SIGNUP="false" in Vercel to close it again.
  */
 export function isPublicSignupEnabled(): boolean {
-  return process.env.ALLOW_PUBLIC_SIGNUP?.trim() === "true";
+  return process.env.ALLOW_PUBLIC_SIGNUP?.trim().toLowerCase() !== "false";
 }
