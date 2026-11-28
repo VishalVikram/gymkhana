@@ -262,7 +262,7 @@ export default function EmployeesPage() {
                 setShowPasswordModal(false);
                 setGeneratedPassword(null);
               }}
-              className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              className="w-full px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
             >
               I&apos;ve Saved the Password
             </Button>
@@ -309,7 +309,7 @@ export default function EmployeesPage() {
                 <tr key={user.id} className="hover:bg-muted/50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold">
+                      <div className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-semibold">
                         {user.name[0].toUpperCase()}
                       </div>
                       <div className="ml-4">
@@ -328,8 +328,8 @@ export default function EmployeesPage() {
                     <span
                       className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium ${
                         user.role === "ADMIN"
-                          ? "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300"
-                          : "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+                          ? "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
+                          : "bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
                       }`}
                     >
                       {user.role === "ADMIN" ? (
@@ -356,7 +356,7 @@ export default function EmployeesPage() {
                       <Button
                         type="button"
                         onClick={() => handleOpenForm(user)}
-                        className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-200"
+                        className="text-primary hover:text-primary dark:text-primary dark:hover:text-primary"
                       >
                         <Edit className="h-4 w-4" />
                       </Button>
@@ -523,7 +523,7 @@ export default function EmployeesPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, isActive: e.target.checked })
                     }
-                    className="h-4 w-4 text-blue-600 focus:ring-ring border-border rounded"
+                    className="h-4 w-4 text-primary focus:ring-ring border-border rounded"
                   />
                   <label
                     htmlFor="isActive"
@@ -547,7 +547,7 @@ export default function EmployeesPage() {
                 <Button
                   type="submit"
                   disabled={submitting}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   <Save className="h-4 w-4" />
                   {submitting ? "Saving..." : editingUser ? "Update" : "Create"}

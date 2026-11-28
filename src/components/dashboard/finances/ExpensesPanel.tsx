@@ -456,7 +456,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
         <div className="bg-card/80 backdrop-blur-xl rounded-2xl shadow-lg shadow-gray-900/5 border border-border/50 overflow-hidden">
           {loading ? (
             <div className="p-16 text-center">
-              <Loader2 className="h-8 w-8 text-blue-600 animate-spin mx-auto mb-4" />
+              <Loader2 className="h-8 w-8 text-primary animate-spin mx-auto mb-4" />
               <p className="text-muted-foreground font-medium">Loading...</p>
             </div>
           ) : expenses.length === 0 ? (
@@ -474,7 +474,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                 <Button
                   type="button"
                   onClick={clearFilters}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors font-medium text-sm"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors font-medium text-sm"
                 >
                   Clear Filters
                 </Button>
@@ -519,7 +519,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                         <span
                           className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${
                             expense.type === "RECURRING"
-                              ? "bg-purple-100 text-purple-800 border-purple-200"
+                              ? "bg-primary/10 text-primary border-primary/30"
                               : "bg-muted text-foreground border-border"
                           } border`}
                         >
@@ -566,7 +566,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                           <Button
                             type="button"
                             onClick={() => handleOpenExpenseForm(expense)}
-                            className="text-blue-600 hover:text-blue-900"
+                            className="text-primary hover:text-primary"
                           >
                             <Edit className="h-4 w-4" />
                           </Button>
@@ -714,14 +714,14 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                       </SelectNative>
                     </div>
                     {!editingItem && (
-                      <div className="flex items-center gap-3 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                      <div className="flex items-center gap-3 p-4 bg-primary/10 dark:bg-primary/20 border border-primary/30 rounded-lg">
                         <CheckboxInput
                           id="createPastEntries"
                           checked={expenseForm.createPastEntries}
                           onChange={(e) =>
                             setExpenseForm({ ...expenseForm, createPastEntries: e.target.checked })
                           }
-                          className="h-4 w-4 text-blue-600 focus:ring-ring border-border rounded"
+                          className="h-4 w-4 text-primary focus:ring-ring border-border rounded"
                         />
                         <label htmlFor="createPastEntries" className="text-sm font-medium text-foreground cursor-pointer">
                           Create entries for past periods (e.g., if start date is Jan 2025, create entries for Jan, Feb, Mar, etc.)
@@ -809,7 +809,7 @@ export const ExpensesPanel = forwardRef<ExpensesPanelHandle, ExpensesPanelProps>
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <Save className="h-4 w-4" />
                     {submitting ? "Saving..." : editingItem ? "Update" : "Create"}

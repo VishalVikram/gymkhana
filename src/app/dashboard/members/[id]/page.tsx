@@ -291,7 +291,7 @@ export default function MemberDetailPage() {
         {!editing ? (
           <Button
             onClick={() => setEditing(true)}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-primary-foreground px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-200 font-semibold active:scale-[0.98]"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 font-semibold active:scale-[0.98]"
           >
             <Edit2 className="h-4 w-4" />
             Edit
@@ -311,7 +311,7 @@ export default function MemberDetailPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-primary-foreground px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-semibold active:scale-[0.98]"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-semibold active:scale-[0.98]"
             >
               <Save className="h-4 w-4" />
               {saving ? "Saving..." : "Save"}
@@ -357,7 +357,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "name" && (
                 <Button
                   onClick={() => handleStartEditField("name", member.name)}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -386,7 +386,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("name")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -410,7 +410,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "phone" && (
                 <Button
                   onClick={() => handleStartEditField("phone", member.phone)}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -439,7 +439,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("phone")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -461,7 +461,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "gender" && (
                 <Button
                   onClick={() => handleStartEditField("gender", member.gender || "")}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -496,7 +496,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("gender")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -520,7 +520,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "dateOfBirth" && (
                 <Button
                   onClick={() => handleStartEditField("dateOfBirth", member.dateOfBirth ? member.dateOfBirth.split("T")[0] : "")}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -547,7 +547,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("dateOfBirth")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -571,7 +571,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "status" && (
                 <Button
                   onClick={() => handleStartEditField("status", member.status)}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -604,7 +604,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("status")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -634,7 +634,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "emergencyContact" && (
                 <Button
                   onClick={() => handleStartEditField("emergencyContact", member.emergencyContact || "")}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -663,7 +663,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleSaveField("emergencyContact")}
                   disabled={saving}
-                  className="px-3 py-3 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   <Save className="h-4 w-4" />
                 </Button>
@@ -690,7 +690,7 @@ export default function MemberDetailPage() {
                     setFixingDate("joinDate");
                     setDateToFix(member.joinDate.split("T")[0]);
                   }}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-xs text-primary hover:text-primary font-medium"
                 >
                   Fix Date
                 </Button>
@@ -707,7 +707,7 @@ export default function MemberDetailPage() {
                 <Button
                   onClick={() => handleFixDate("joinDate")}
                   disabled={saving}
-                  className="px-3 py-2 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                  className="px-3 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                 >
                   Save
                 </Button>
@@ -732,7 +732,7 @@ export default function MemberDetailPage() {
               {!editing && editingField !== "address" && (
                 <Button
                   onClick={() => handleStartEditField("address", member.address || "")}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-blue-50/50 border border-blue-200/50 hover:bg-blue-100 hover:border-blue-300 transition-all"
+                  className="text-sm text-primary hover:text-primary font-semibold flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-primary/20 border border-primary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   title="Edit field"
                 >
                   <Pencil className="h-4 w-4" />
@@ -760,7 +760,7 @@ export default function MemberDetailPage() {
                   <Button
                     onClick={() => handleSaveField("address")}
                     disabled={saving}
-                    className="px-3 py-2 bg-blue-600 text-primary-foreground rounded-xl hover:bg-blue-700 transition-colors disabled:opacity-50 text-sm font-semibold"
+                    className="px-3 py-2 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 text-sm font-semibold"
                   >
                     <Save className="h-4 w-4 inline mr-1" />
                     Save
@@ -853,7 +853,7 @@ export default function MemberDetailPage() {
                 <p className="text-sm text-muted-foreground font-medium">Plan</p>
                 <Link
                   href={`/dashboard/members/${memberId}/renew`}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1"
+                  className="text-xs text-primary hover:text-primary font-medium inline-flex items-center gap-1"
                 >
                   <Pencil className="h-3 w-3" />
                   Edit
@@ -875,7 +875,7 @@ export default function MemberDetailPage() {
                     setFixingDate("membershipStartDate");
                     setDateToFix(currentMembership.startDate.split("T")[0]);
                   }}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-xs text-primary hover:text-primary font-medium"
                 >
                   Fix
                 </Button>
@@ -891,7 +891,7 @@ export default function MemberDetailPage() {
                   <Button
                     onClick={() => handleFixDate("membershipStartDate")}
                     disabled={saving}
-                    className="px-2 py-1.5 bg-blue-600 text-primary-foreground rounded-lg hover:bg-blue-700 text-xs disabled:opacity-50"
+                    className="px-2 py-1.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 text-xs disabled:opacity-50"
                   >
                     Save
                   </Button>
@@ -919,7 +919,7 @@ export default function MemberDetailPage() {
                     setFixingDate("membershipEndDate");
                     setDateToFix(currentMembership.endDate.split("T")[0]);
                   }}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-xs text-primary hover:text-primary font-medium"
                 >
                   Fix
                 </Button>
@@ -935,7 +935,7 @@ export default function MemberDetailPage() {
                   <Button
                     onClick={() => handleFixDate("membershipEndDate")}
                     disabled={saving}
-                    className="px-2 py-1.5 bg-blue-600 text-primary-foreground rounded-lg hover:bg-blue-700 text-xs disabled:opacity-50"
+                    className="px-2 py-1.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 text-xs disabled:opacity-50"
                   >
                     Save
                   </Button>

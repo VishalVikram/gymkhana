@@ -96,7 +96,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           icon: Users,
           badge: counts.members.count,
           badge2: counts.members.activeMembers,
-          badgeColor: "bg-blue-500/10 text-blue-700 dark:text-blue-400",
+          badgeColor: "bg-primary/10 text-primary",
         },
         {
           title: "Leads",
@@ -200,7 +200,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           url: "/dashboard/tasks",
           icon: ListTodo,
           badge: counts.adminTasks,
-          badgeColor: "bg-violet-500/10 text-violet-700 dark:text-violet-400",
+          badgeColor: "bg-primary/10 text-primary",
         },
         {
           title: "Employees",

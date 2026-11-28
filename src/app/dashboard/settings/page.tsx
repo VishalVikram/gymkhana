@@ -640,7 +640,7 @@ export default function SettingsPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* GYM Plans */}
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 pb-2 border-b-2 border-purple-500">
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 pb-2 border-b-2 border-primary/30">
                     <span className="text-2xl">💪</span>
                     <span>Gym Plans</span>
                     <span className="text-sm font-normal text-muted-foreground">({plans.filter(p => p.planType === 'GYM').length})</span>
@@ -654,10 +654,10 @@ export default function SettingsPage() {
                       if (durationPlans.length === 0) return null;
                       
                       const durationColor = 
-                        duration === 30 ? { bg: 'bg-purple-500/10', border: 'border-l-purple-400', text: 'text-purple-600 dark:text-purple-400' } :
-                        duration === 90 ? { bg: 'bg-purple-500/20', border: 'border-l-purple-500', text: 'text-purple-600 dark:text-purple-400' } :
-                        duration === 180 ? { bg: 'bg-purple-500/30', border: 'border-l-purple-600', text: 'text-purple-700 dark:text-purple-300' } :
-                        { bg: 'bg-purple-500/40', border: 'border-l-purple-700', text: 'text-purple-800 dark:text-purple-200' };
+                        duration === 30 ? { bg: 'bg-primary/10', border: 'border-l-purple-400', text: 'text-primary dark:text-primary' } :
+                        duration === 90 ? { bg: 'bg-primary/20', border: 'border-l-purple-500', text: 'text-primary dark:text-primary' } :
+                        duration === 180 ? { bg: 'bg-primary/20', border: 'border-l-purple-600', text: 'text-primary dark:text-primary' } :
+                        { bg: 'bg-primary/20', border: 'border-l-purple-700', text: 'text-primary dark:text-primary' };
                       
                       const durationLabel = 
                         duration === 30 ? 'Monthly' :
@@ -713,7 +713,7 @@ export default function SettingsPage() {
 
                 {/* PT Plans */}
                 <div>
-                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 pb-2 border-b-2 border-amber-500">
+                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 pb-2 border-b-2 border-slate-500">
                     <span className="text-2xl">🏋️</span>
                     <span>PT Plans</span>
                     <span className="text-sm font-normal text-muted-foreground">({plans.filter(p => p.planType === 'PT').length})</span>
@@ -727,10 +727,10 @@ export default function SettingsPage() {
                       if (durationPlans.length === 0) return null;
                       
                       const durationColor = 
-                        duration === 30 ? { bg: 'bg-amber-500/10', border: 'border-l-amber-400', text: 'text-amber-600 dark:text-amber-400' } :
-                        duration === 90 ? { bg: 'bg-amber-500/20', border: 'border-l-amber-500', text: 'text-amber-600 dark:text-amber-400' } :
-                        duration === 180 ? { bg: 'bg-amber-500/30', border: 'border-l-amber-600', text: 'text-amber-700 dark:text-amber-300' } :
-                        { bg: 'bg-amber-500/40', border: 'border-l-amber-700', text: 'text-amber-800 dark:text-amber-200' };
+                        duration === 30 ? { bg: 'bg-slate-500/10', border: 'border-l-slate-400', text: 'text-slate-600 dark:text-slate-400' } :
+                        duration === 90 ? { bg: 'bg-slate-500/20', border: 'border-l-slate-500', text: 'text-slate-600 dark:text-slate-400' } :
+                        duration === 180 ? { bg: 'bg-slate-500/30', border: 'border-l-slate-600', text: 'text-slate-700 dark:text-slate-300' } :
+                        { bg: 'bg-slate-500/40', border: 'border-l-slate-700', text: 'text-slate-800 dark:text-slate-200' };
                       
                       const durationLabel = 
                         duration === 30 ? 'Monthly' :
@@ -792,46 +792,46 @@ export default function SettingsPage() {
                   <div className="space-y-3">
                     <div className="text-sm">
                       <span className="font-semibold flex items-center gap-2 mb-2">
-                        💪 Gym Plans <span className="text-xs font-normal text-muted-foreground">(Purple shades)</span>
+                        💪 Gym Plans <span className="text-xs font-normal text-muted-foreground">(Gold shades)</span>
                       </span>
                       <div className="grid grid-cols-2 gap-2 ml-2">
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-purple-400"></div>
+                          <div className="w-4 h-4 rounded bg-primary"></div>
                           <span className="text-xs text-muted-foreground">Monthly (lighter)</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-purple-500"></div>
+                          <div className="w-4 h-4 rounded bg-primary"></div>
                           <span className="text-xs text-muted-foreground">3 Month</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-purple-600"></div>
+                          <div className="w-4 h-4 rounded bg-primary"></div>
                           <span className="text-xs text-muted-foreground">6 Month</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-purple-700"></div>
+                          <div className="w-4 h-4 rounded bg-primary"></div>
                           <span className="text-xs text-muted-foreground">12 Month (darker)</span>
                         </div>
                       </div>
                     </div>
                     <div className="text-sm">
                       <span className="font-semibold flex items-center gap-2 mb-2">
-                        🏋️ PT Plans <span className="text-xs font-normal text-muted-foreground">(Golden shades)</span>
+                        🏋️ PT Plans <span className="text-xs font-normal text-muted-foreground">(Slate shades)</span>
                       </span>
                       <div className="grid grid-cols-2 gap-2 ml-2">
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-amber-400"></div>
+                          <div className="w-4 h-4 rounded bg-slate-400"></div>
                           <span className="text-xs text-muted-foreground">Monthly (lighter)</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-amber-500"></div>
+                          <div className="w-4 h-4 rounded bg-slate-500"></div>
                           <span className="text-xs text-muted-foreground">3 Month</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-amber-600"></div>
+                          <div className="w-4 h-4 rounded bg-slate-600"></div>
                           <span className="text-xs text-muted-foreground">6 Month</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded bg-amber-700"></div>
+                          <div className="w-4 h-4 rounded bg-slate-700"></div>
                           <span className="text-xs text-muted-foreground">12 Month (darker)</span>
                         </div>
                       </div>
@@ -840,7 +840,7 @@ export default function SettingsPage() {
                 </div>
 
                 {/* Plan Rules */}
-                <div className="p-4 rounded-lg bg-blue-500/5 border border-blue-500/20">
+                <div className="p-4 rounded-lg bg-primary/10 border border-primary/20">
                   <p className="text-sm text-foreground font-medium mb-2">💡 Plan Structure & Rules:</p>
                   <ul className="text-sm text-muted-foreground space-y-1 ml-4 list-disc">
                     <li><strong>Gym Plans</strong>: Monthly (₹699-800), 3 Month (₹1799-2099), 6 Month (₹2999-3599), 12 Month (₹4899-5999)</li>
@@ -977,7 +977,7 @@ function ActionLogsViewer() {
                   <div className="text-xs text-muted-foreground">{log.User?.contactNumber}</div>
                 </td>
                 <td className="px-4 py-3 whitespace-nowrap">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 dark:bg-primary/15 text-primary dark:text-primary">
                     {log.action}
                   </span>
                 </td>

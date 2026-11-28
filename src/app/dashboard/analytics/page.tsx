@@ -216,7 +216,7 @@ export default function AnalyticsPage() {
               {PRESET_RANGES.map((range) => {
                 const isSelected = preset === range.value;
                 const colorClass = isSelected
-                  ? "bg-indigo-500/20 border-indigo-500/50 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-500/30"
+                  ? "bg-primary/20 border-primary/50 text-primary hover:bg-primary/20"
                   : "border-border/50 hover:bg-muted/50";
                 return (
                   <Button
@@ -341,43 +341,43 @@ export default function AnalyticsPage() {
             )}
 
             {selectedMetrics.includes("members") && data.newMembers && (
-              <Card className="p-4 border-blue-500/30 bg-gradient-to-br from-blue-500/5 to-blue-500/10">
+              <Card className="p-4 border-primary/30 bg-gradient-to-br from-primary to-primary/80">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs text-blue-700 dark:text-blue-300 font-medium">New Members</p>
-                    <p className="text-2xl font-bold mt-1 text-blue-700 dark:text-blue-300">{data.newMembers.count}</p>
+                    <p className="text-xs text-primary font-medium">New Members</p>
+                    <p className="text-2xl font-bold mt-1 text-primary">{data.newMembers.count}</p>
                     <p className="text-xs text-muted-foreground mt-1">Joined in period</p>
                   </div>
-                  <Users className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                  <Users className="h-8 w-8 text-primary" />
                 </div>
               </Card>
             )}
 
             {selectedMetrics.includes("renewals") && data.renewals && (
-              <Card className="p-4 border-purple-500/30 bg-gradient-to-br from-purple-500/5 to-purple-500/10">
+              <Card className="p-4 border-primary/30 bg-gradient-to-br from-primary to-primary/80">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs text-purple-700 dark:text-purple-300 font-medium">Renewals</p>
-                    <p className="text-2xl font-bold mt-1 text-purple-700 dark:text-purple-300">{data.renewals.count}</p>
+                    <p className="text-xs text-primary font-medium">Renewals</p>
+                    <p className="text-2xl font-bold mt-1 text-primary">{data.renewals.count}</p>
                     <p className="text-xs text-muted-foreground mt-1">In period</p>
                   </div>
-                  <RefreshCw className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                  <RefreshCw className="h-8 w-8 text-primary" />
                 </div>
               </Card>
             )}
 
             {selectedMetrics.includes("attendance") && data.attendance && data.uniqueAttendees && (
-              <Card className="p-4 border-cyan-500/30 bg-gradient-to-br from-cyan-500/5 to-cyan-500/10">
+              <Card className="p-4 border-primary/30 bg-gradient-to-br from-primary to-primary/80">
                 <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs text-cyan-700 dark:text-cyan-300 font-medium">Attendance</p>
-                  <Activity className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+                  <p className="text-xs text-primary font-medium">Attendance</p>
+                  <Activity className="h-5 w-5 text-primary" />
                 </div>
                 <div className="space-y-2">
                   <div>
-                    <p className="text-2xl font-bold text-cyan-700 dark:text-cyan-300">{data.attendance.count}</p>
+                    <p className="text-2xl font-bold text-primary">{data.attendance.count}</p>
                     <p className="text-xs text-muted-foreground">Total check-ins</p>
                   </div>
-                  <div className="flex items-center justify-between pt-2 border-t border-cyan-500/20">
+                  <div className="flex items-center justify-between pt-2 border-t border-primary/20">
                     <div>
                       <p className="text-sm font-medium">{data.uniqueAttendees.count}</p>
                       <p className="text-xs text-muted-foreground">Unique members</p>
@@ -478,16 +478,16 @@ export default function AnalyticsPage() {
                 <CardContent>
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                      <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
                         <p className="text-xs text-muted-foreground mb-1">Average Delay</p>
-                        <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{data.delayPatterns.averageDelay} days</p>
+                        <p className="text-2xl font-bold text-primary">{data.delayPatterns.averageDelay} days</p>
                         <p className="text-[10px] text-muted-foreground mt-1">
                           From {data.delayPatterns.totalPaymentsAnalyzed || 0} renewals
                         </p>
                       </div>
-                      <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                      <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
                         <p className="text-xs text-muted-foreground mb-1">On-Time Rate</p>
-                        <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                        <p className="text-2xl font-bold text-primary">
                           {data.delayPatterns.totalPaymentsAnalyzed > 0 
                             ? Math.round((data.delayPatterns.delayDistribution.onTime / data.delayPatterns.totalPaymentsAnalyzed) * 100)
                             : 0}%

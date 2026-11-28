@@ -92,7 +92,7 @@ export default function FinancesPage() {
             onClick={() => setActiveTab("salaries")}
             className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-200 ${
               activeTab === "salaries"
-                ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-[1.02]"
+                ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/30 scale-[1.02]"
                 : "text-muted-foreground text-muted-foreground hover:text-foreground dark:hover:text-gray-100 hover:bg-gray-100 hover:bg-muted/50"
             }`}
           >
@@ -106,7 +106,7 @@ export default function FinancesPage() {
             onClick={() => setActiveTab("expenses")}
             className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-200 ${
               activeTab === "expenses"
-                ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-[1.02]"
+                ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-lg shadow-primary/30 scale-[1.02]"
                 : "text-muted-foreground text-muted-foreground hover:text-foreground dark:hover:text-gray-100 hover:bg-gray-100 hover:bg-muted/50"
             }`}
           >

@@ -31,10 +31,10 @@ type LeadRow = {
 };
 
 const STATUS_COLORS: Record<string, string> = {
-  NEW: "bg-blue-500/10 text-blue-700",
+  NEW: "bg-primary/10 text-primary",
   CONTACTED: "bg-amber-500/10 text-amber-700",
-  TRIAL_SCHEDULED: "bg-purple-500/10 text-purple-700",
-  TRIAL_DONE: "bg-indigo-500/10 text-indigo-700",
+  TRIAL_SCHEDULED: "bg-primary/10 text-primary",
+  TRIAL_DONE: "bg-primary/10 text-primary",
   CONVERTED: "bg-green-500/10 text-green-700",
   LOST: "bg-muted text-muted-foreground",
 };

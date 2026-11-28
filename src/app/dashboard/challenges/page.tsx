@@ -120,7 +120,7 @@ export default function ChallengesPage() {
       case 'ACTIVE':
         return 'bg-green-100 text-green-800';
       case 'UPCOMING':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-primary/10 text-primary';
       case 'COMPLETED':
         return 'bg-muted text-muted-foreground';
       default:
@@ -220,8 +220,8 @@ export default function ChallengesPage() {
                 </div>
 
                 {challenge.targetValue && (
-                  <div className="mb-4 p-3 bg-blue-50 rounded">
-                    <span className="text-sm font-medium text-blue-800">
+                  <div className="mb-4 p-3 bg-primary/10 rounded">
+                    <span className="text-sm font-medium text-primary">
                       Target: {challenge.targetValue}
                     </span>
                   </div>
@@ -322,7 +322,7 @@ export default function ChallengesPage() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-blue-600">
+                      <div className="text-2xl font-bold text-primary">
                         {entry.value}
                       </div>
                       <div className="text-sm text-muted-foreground">{entry.label}</div>

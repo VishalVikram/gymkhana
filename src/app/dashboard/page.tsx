@@ -301,7 +301,7 @@ export default async function DashboardPage() {
       <div className="space-y-6">
         {/* Total Collection */}
         {stats.paymentStats?.totalFrom2023 && (
-          <Card className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-900 text-white border-0 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardContent className="pt-6 pb-6">
               <div className="flex items-center justify-between">
                 <div className="space-y-2">
@@ -344,8 +344,8 @@ export default async function DashboardPage() {
                   <p className="text-sm font-medium text-muted-foreground">Total Payments</p>
                   <p className="text-2xl font-bold">{stats.paymentStats.count.toLocaleString('en-IN')}</p>
                 </div>
-                <div className="h-12 w-12 rounded-full bg-purple-100 dark:bg-purple-950 flex items-center justify-center">
-                  <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                <div className="h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/15 flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
                 </div>
               </div>
             </CardContent>
@@ -358,8 +358,8 @@ export default async function DashboardPage() {
                   <p className="text-sm font-medium text-muted-foreground">Average Payment</p>
                   <p className="text-2xl font-bold">{formatCurrency(Number(stats.paymentStats.average))}</p>
                 </div>
-                <div className="h-12 w-12 rounded-full bg-cyan-100 dark:bg-cyan-950 flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
+                <div className="h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/15 flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-primary" />
                 </div>
               </div>
             </CardContent>

@@ -234,14 +234,14 @@ function KanbanColumn({
   const colorClasses = {
     red: "border-red-200 dark:border-red-800 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950/30 dark:to-red-900/20",
     yellow: "border-amber-200 dark:border-amber-800 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/30 dark:to-amber-900/20",
-    blue: "border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/20",
+    blue: "border-primary/30 bg-gradient-to-br from-primary/10 to-primary/10 dark:from-primary/10 dark:to-primary/10",
     gray: "border-border bg-gradient-to-br from-muted to-muted/80",
   };
 
   const textColorClasses = {
     red: "text-red-700 dark:text-red-300",
     yellow: "text-amber-700 dark:text-amber-300",
-    blue: "text-blue-700 dark:text-blue-300",
+    blue: "text-primary",
     gray: "text-muted-foreground",
   };
 

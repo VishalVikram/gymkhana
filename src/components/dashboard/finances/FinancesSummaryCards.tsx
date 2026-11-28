@@ -17,7 +17,7 @@ export function FinancesSummaryCards({ salaries, expenses }: FinancesSummaryCard
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="group relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 rounded-2xl shadow-2xl shadow-green-500/30 dark:shadow-green-500/20 p-8 text-white overflow-hidden hover:shadow-green-500/40 transition-all duration-300 hover:scale-[1.02]">
+      <div className="group relative bg-gradient-to-br from-green-500 via-emerald-600 to-primary/80 rounded-2xl shadow-2xl shadow-green-500/30 dark:shadow-green-500/20 p-8 text-white overflow-hidden hover:shadow-green-500/40 transition-all duration-300 hover:scale-[1.02]">
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12 blur-xl"></div>
         <div className="relative flex items-center justify-between">
@@ -34,7 +34,7 @@ export function FinancesSummaryCards({ salaries, expenses }: FinancesSummaryCard
           </div>
         </div>
       </div>
-      <div className="group relative bg-gradient-to-br from-red-500 via-rose-600 to-pink-600 rounded-2xl shadow-2xl shadow-red-500/30 dark:shadow-red-500/20 p-8 text-white overflow-hidden hover:shadow-red-500/40 transition-all duration-300 hover:scale-[1.02]">
+      <div className="group relative bg-gradient-to-br from-red-500 via-rose-600 to-primary/80 rounded-2xl shadow-2xl shadow-red-500/30 dark:shadow-red-500/20 p-8 text-white overflow-hidden hover:shadow-red-500/40 transition-all duration-300 hover:scale-[1.02]">
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12 blur-xl"></div>
         <div className="relative flex items-center justify-between">

@@ -136,7 +136,7 @@ export default function BillDetailPage() {
         <div className="flex items-center gap-2">
           <Button
             onClick={handlePrint}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-200 font-semibold text-sm active:scale-[0.98]"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-4 py-2 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 font-semibold text-sm active:scale-[0.98]"
           >
             <Printer className="h-4 w-4" />
             Print

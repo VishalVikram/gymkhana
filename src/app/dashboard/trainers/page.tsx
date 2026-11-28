@@ -253,7 +253,7 @@ export default function TrainersPage() {
                       <Button
                         onClick={() => markAsPaid(commission.id)}
                         disabled={isQueued(`mark-commission-paid:${commission.id}`)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-primary hover:text-primary text-sm font-medium"
                       >
                         {payingCommissionId === commission.id || isQueued(`mark-commission-paid:${commission.id}`) ? (
                           <span className="inline-flex items-center gap-1.5">

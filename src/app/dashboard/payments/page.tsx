@@ -130,7 +130,7 @@ function PaymentTagsCell({
           </span>
         )}
         {effectivePT && (
-          <span className="inline-flex rounded-full px-2 py-0.5 text-[10px] sm:text-xs font-semibold border bg-indigo-100 text-indigo-800 border-indigo-200 dark:bg-indigo-900/40 dark:text-indigo-200 dark:border-indigo-700">
+          <span className="inline-flex rounded-full px-2 py-0.5 text-[10px] sm:text-xs font-semibold border bg-primary/10 text-primary border-primary/30 dark:bg-primary/20 dark:text-primary dark:border-primary/30">
             PT
           </span>
         )}
@@ -287,11 +287,11 @@ export default function PaymentsPage() {
 
   const getMethodBadge = (method: PaymentMethod) => {
     const styles: Record<string, string> = {
-      UPI: "bg-blue-100 text-blue-800 border-blue-200",
+      UPI: "bg-primary/10 text-primary border-primary/30",
       CASH: "bg-green-100 text-green-800 border-green-200",
-      MIXED: "bg-teal-100 text-teal-800 border-teal-200",
-      CARD: "bg-purple-100 text-purple-800 border-purple-200",
-      BANK_TRANSFER: "bg-indigo-100 text-indigo-800 border-indigo-200",
+      MIXED: "bg-primary/10 text-primary border-primary/30",
+      CARD: "bg-primary/10 text-primary border-primary/30",
+      BANK_TRANSFER: "bg-primary/10 text-primary border-primary/30",
       OTHER: "bg-muted text-foreground border-border",
     };
     return styles[method] || styles.OTHER;
@@ -393,7 +393,7 @@ export default function PaymentsPage() {
             <CheckboxInput
               checked={autoRefresh}
               onChange={(e) => setAutoRefresh(e.target.checked)}
-              className="rounded border-input text-blue-600 focus:ring-2 focus:ring-ring cursor-pointer"
+              className="rounded border-input text-primary focus:ring-2 focus:ring-ring cursor-pointer"
             />
             <span>Auto</span>
           </label>
@@ -412,7 +412,7 @@ export default function PaymentsPage() {
             type="button"
             onClick={fetchPayments}
             disabled={isLoading}
-            className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 text-sm font-medium"
+            className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-2 rounded-lg hover:bg-primary/90 transition-all disabled:opacity-50 text-sm font-medium"
           >
             <RefreshCw className={`h-3.5 w-3.5 ${isLoading ? "animate-spin" : ""}`} />
             Refresh
@@ -441,7 +441,7 @@ export default function PaymentsPage() {
             </div>
             <h3 className="text-sm font-bold text-card-foreground">Filters</h3>
             {hasActiveFilters && (
-              <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold">
+              <span className="inline-flex items-center gap-1 bg-primary/10 text-primary px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold">
                 Active
               </span>
             )}
@@ -497,7 +497,7 @@ export default function PaymentsPage() {
           <Button
             type="button"
             onClick={handleSearch}
-            className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-2 text-sm rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-semibold"
+            className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-3 py-2 text-sm rounded-lg hover:from-primary hover:to-primary/80 transition-all font-semibold"
           >
             Search
           </Button>
@@ -545,7 +545,7 @@ export default function PaymentsPage() {
         
         {isLoading ? (
           <div className="p-16 text-center">
-            <Loader2 className="h-8 w-8 text-blue-600 animate-spin mx-auto mb-4" />
+            <Loader2 className="h-8 w-8 text-primary animate-spin mx-auto mb-4" />
             <p className="text-muted-foreground font-medium">Loading payments...</p>
           </div>
         ) : !Array.isArray(payments) || payments.length === 0 ? (
@@ -563,7 +563,7 @@ export default function PaymentsPage() {
               <Button
                 type="button"
                 onClick={clearFilters}
-                className="mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm"
+                className="mt-4 text-primary hover:text-primary font-medium text-sm"
               >
                 Clear filters
               </Button>

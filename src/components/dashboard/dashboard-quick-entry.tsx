@@ -24,7 +24,7 @@ export function DashboardQuickEntryButton({
       type="button"
       onClick={() => onOpenChange(!open)}
       className={cn(
-        "inline-flex items-center gap-1.5 bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-all text-sm font-medium",
+        "inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-2 rounded-lg hover:bg-primary/90 transition-all text-sm font-medium",
         className
       )}
     >
@@ -389,7 +389,7 @@ export function DashboardQuickEntryPanel({
       return (
         <div className="flex flex-col gap-3">
           {lastBulkResponse?.bulk === true && (lastBulkResponse.failed ?? 0) > 0 && (
-            <div className="text-xs rounded-md border border-purple-300/80 dark:border-purple-700 bg-purple-100/50 dark:bg-purple-950/40 px-2 py-1.5 text-purple-900 dark:text-purple-100">
+            <div className="text-xs rounded-md border border-primary/80 dark:border-primary/30 bg-primary/20 px-2 py-1.5 text-primary">
               After verify, <span className="font-medium">Cancel</span> restores the last bulk summary (
               {lastBulkResponse.failed} failed line(s)).
             </div>
@@ -561,18 +561,18 @@ export function DashboardQuickEntryPanel({
   if (!open) return null;
 
   return (
-    <Card className="border-purple-200 dark:border-purple-800 bg-purple-50/30 dark:bg-purple-950/20 rounded-lg relative z-10">
+    <Card className="border-primary/30 bg-primary/20 rounded-lg relative z-10">
       <CardHeader className="pb-2 pt-3 px-3">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <CardTitle className="text-sm sm:text-base flex items-center gap-2">
-            <Zap className="h-4 w-4 text-purple-600 shrink-0" />
+            <Zap className="h-4 w-4 text-primary shrink-0" />
             <span>Quick Entry</span>
           </CardTitle>
           <div className="flex items-center gap-2">
             <Button
               type="button"
               onClick={() => setIsBulkMode(!isBulkMode)}
-              className="text-xs px-2 py-1 rounded border border-purple-300 dark:border-purple-700 hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
+              className="text-xs px-2 py-1 rounded border border-primary/30 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
             >
               {isBulkMode ? "Single Mode" : "Bulk Mode"}
             </Button>
@@ -645,7 +645,7 @@ all dates 16th March`}
             type="button"
             onClick={() => void handleQuickEntry()}
             disabled={quickEntryLoading || !quickEntryText.trim()}
-            className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-all disabled:opacity-50 text-sm font-medium flex items-center justify-center gap-1.5 whitespace-nowrap"
+            className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-all disabled:opacity-50 text-sm font-medium flex items-center justify-center gap-1.5 whitespace-nowrap"
           >
             {quickEntryLoading ? (
               <>

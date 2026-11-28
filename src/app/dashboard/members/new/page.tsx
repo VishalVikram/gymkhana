@@ -374,10 +374,10 @@ function NewMemberForm() {
             </div>
 
             <div className="md:col-span-2">
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/40 dark:to-purple-950/40 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
+              <div className="bg-gradient-to-r from-primary/10 to-primary/10 dark:from-primary/10 dark:to-primary/10 border border-primary/30 rounded-xl p-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-foreground">Total Amount:</span>
-                  <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  <span className="text-2xl font-bold text-primary">
                     ₹{calculateTotalAmount().toLocaleString('en-IN')}
                   </span>
                 </div>
@@ -509,7 +509,7 @@ function NewMemberForm() {
                   <CheckboxInput
                     checked={formData.isPersonalTrainer}
                     onChange={(e) => handlePersonalTrainerChange(e.target.checked)}
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
+                    className="w-4 h-4 rounded border-input text-primary focus:ring-ring"
                   />
                   <span className="text-sm text-foreground font-medium">
                     Personal Trainer (PT) - ₹2,000
@@ -521,7 +521,7 @@ function NewMemberForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, friendsFamilyDiscount: e.target.checked })
                     }
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
+                    className="w-4 h-4 rounded border-input text-primary focus:ring-ring"
                   />
                   <span className="text-sm text-foreground font-medium">Friends & Family Discount</span>
                 </label>
@@ -531,7 +531,7 @@ function NewMemberForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, studentOrGymfloPlan: e.target.checked })
                     }
-                    className="w-4 h-4 rounded border-input text-blue-600 focus:ring-ring"
+                    className="w-4 h-4 rounded border-input text-primary focus:ring-ring"
                   />
                   <span className="text-sm text-foreground font-medium">Student / Duo Plan (2 people)</span>
                 </label>
@@ -551,7 +551,7 @@ function NewMemberForm() {
           <Button
             type="submit"
             disabled={loading}
-            className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-semibold active:scale-[0.98]"
+            className="px-6 py-2.5 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-semibold active:scale-[0.98]"
           >
             {loading ? "Creating..." : "Create Member"}
           </Button>

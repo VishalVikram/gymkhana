@@ -238,7 +238,7 @@ export default function GenerateBillPage() {
             </div>
 
             {selectedMember && (
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+              <div className="bg-primary/10 border border-primary/30 rounded-xl p-4">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-semibold text-foreground">{selectedMember.name}</p>
@@ -250,7 +250,7 @@ export default function GenerateBillPage() {
                   <Button
                     type="button"
                     onClick={() => setSelectedMember(null)}
-                    className="text-sm text-blue-600 hover:text-blue-700 font-semibold"
+                    className="text-sm text-primary hover:text-primary font-semibold"
                   >
                     Change
                   </Button>
@@ -339,7 +339,7 @@ export default function GenerateBillPage() {
                 <CheckboxInput
                   checked={formData.hideAmount}
                   onChange={(e) => setFormData({ ...formData, hideAmount: e.target.checked })}
-                  className="w-4 h-4 text-blue-600 border-border rounded focus:ring-ring"
+                  className="w-4 h-4 text-primary border-border rounded focus:ring-ring"
                 />
                 <span className="text-sm font-semibold text-foreground">
                   Hide Amount (for friends & family)
@@ -419,7 +419,7 @@ export default function GenerateBillPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]"
           >
             {loading ? (
               <>

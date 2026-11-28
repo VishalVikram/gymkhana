@@ -126,7 +126,7 @@ export default function BillsPage() {
 
   const getStatusBadge = (status: string) => {
     const styles: Record<string, string> = {
-      ISSUED: "bg-blue-100 text-blue-800 border-blue-200",
+      ISSUED: "bg-primary/10 text-primary border-primary/30",
       PARTIALLY_PAID: "bg-amber-100 text-amber-800 border-amber-200",
       PAID: "bg-green-100 text-green-800 border-green-200",
       OVERDUE: "bg-red-100 text-red-800 border-red-200",
@@ -137,8 +137,8 @@ export default function BillsPage() {
 
   const getProgramBadge = (program: string) => {
     const styles = {
-      MAINTENANCE: "bg-blue-100 text-blue-800 border-blue-200",
-      BODYBUILDING: "bg-purple-100 text-purple-800 border-purple-200",
+      MAINTENANCE: "bg-primary/10 text-primary border-primary/30",
+      BODYBUILDING: "bg-primary/10 text-primary border-primary/30",
       WEIGHT_LOSS: "bg-green-100 text-green-800 border-green-200",
     };
     return styles[program as keyof typeof styles] || styles.MAINTENANCE;
@@ -212,13 +212,13 @@ export default function BillsPage() {
         </div>
         <div className="bg-card rounded-xl shadow-md p-5 border border-border">
           <p className="text-xs font-semibold text-muted-foreground mb-1">Maintenance</p>
-          <p className="text-2xl font-bold text-blue-600">
+          <p className="text-2xl font-bold text-primary">
             {bills.filter((b) => b.programType === "MAINTENANCE").length}
           </p>
         </div>
         <div className="bg-card rounded-xl shadow-md p-5 border border-border">
           <p className="text-xs font-semibold text-muted-foreground mb-1">Bodybuilding</p>
-          <p className="text-2xl font-bold text-purple-600">
+          <p className="text-2xl font-bold text-primary">
             {bills.filter((b) => b.programType === "BODYBUILDING").length}
           </p>
         </div>
@@ -341,7 +341,7 @@ export default function BillsPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           href={`/dashboard/bills/${bill.id}`}
-                          className="text-blue-600 hover:text-blue-700 font-semibold transition-colors p-2 hover:bg-blue-50 rounded-lg"
+                          className="text-primary hover:text-primary font-semibold transition-colors p-2 hover:bg-primary/10 rounded-lg"
                           title="View Bill"
                         >
                           <Eye className="h-4 w-4" />
@@ -349,7 +349,7 @@ export default function BillsPage() {
                         <Button
                           type="button"
                           onClick={() => window.open(`/api/bills/${bill.id}/pdf`, "_blank")}
-                          className="text-purple-600 hover:text-purple-700 font-semibold transition-colors p-2 hover:bg-purple-50 rounded-lg"
+                          className="text-primary hover:text-primary font-semibold transition-colors p-2 hover:bg-primary/10 rounded-lg"
                           title="Download PDF"
                         >
                           <Download className="h-4 w-4" />
@@ -460,7 +460,7 @@ export default function BillsPage() {
                 type="button"
                 onClick={() => mutateReminderCandidates()}
                 disabled={remindersLoading}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 disabled:opacity-50"
               >
                 {remindersLoading ? "Loading..." : "Refresh"}
               </Button>

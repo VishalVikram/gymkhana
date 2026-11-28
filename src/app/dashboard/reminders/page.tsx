@@ -140,7 +140,7 @@ export default function RemindersPage() {
                     </div>
                     <Link
                       href={`/dashboard/members/${item.member.id}`}
-                      className="ml-3 text-xs text-blue-600 hover:text-blue-700 font-semibold whitespace-nowrap"
+                      className="ml-3 text-xs text-primary hover:text-primary font-semibold whitespace-nowrap"
                     >
                       View →
                     </Link>
@@ -148,7 +148,7 @@ export default function RemindersPage() {
                   <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
                     <div>
                       <span className="text-muted-foreground">Plan:</span>
-                      <span className="ml-1 inline-flex rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
+                      <span className="ml-1 inline-flex rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
                         {item.plan.name}
                       </span>
                     </div>
@@ -184,7 +184,7 @@ export default function RemindersPage() {
           <div className="flex items-center justify-between">
             <div>
               <CardTitle className="text-lg flex items-center gap-2">
-                <Clock className="h-5 w-5 text-blue-600" />
+                <Clock className="h-5 w-5 text-primary" />
                 Reminder History
               </CardTitle>
               <CardDescription>All sent reminders with status</CardDescription>
@@ -216,7 +216,7 @@ export default function RemindersPage() {
         <CardContent>
           {historyLoading ? (
             <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary/30 mx-auto"></div>
               <p className="mt-3 text-sm text-muted-foreground">Loading history...</p>
             </div>
           ) : !historyData?.logs || historyData.logs.length === 0 ? (
@@ -265,7 +265,7 @@ export default function RemindersPage() {
                     </div>
                     <Link
                       href={`/dashboard/members/${log.memberId}`}
-                      className="ml-3 text-xs text-blue-600 hover:text-blue-700 font-semibold whitespace-nowrap"
+                      className="ml-3 text-xs text-primary hover:text-primary font-semibold whitespace-nowrap"
                     >
                       View →
                     </Link>

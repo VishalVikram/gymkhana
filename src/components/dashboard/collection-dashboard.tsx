@@ -195,7 +195,7 @@ export function CollectionDashboard() {
           <Button
             type="button"
             onClick={() => fetchStats()}
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
           >
             <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
             Refresh
@@ -209,7 +209,7 @@ export function CollectionDashboard() {
         <div className="bg-card rounded-lg shadow p-6 border border-border">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium text-muted-foreground">Month over Month</h3>
-            <Calendar className="h-5 w-5 text-blue-500" />
+            <Calendar className="h-5 w-5 text-primary" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -256,7 +256,7 @@ export function CollectionDashboard() {
         <div className="bg-card rounded-lg shadow p-6 border border-border">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium text-muted-foreground">Year over Year</h3>
-            <TrendingUp className="h-5 w-5 text-purple-500" />
+            <TrendingUp className="h-5 w-5 text-primary" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -346,7 +346,7 @@ export function CollectionDashboard() {
         <div className="bg-card rounded-lg shadow p-6 border border-border">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium text-muted-foreground">Current Month</h3>
-            <span className="text-2xl font-bold text-blue-500">₹</span>
+            <span className="text-2xl font-bold text-primary">₹</span>
           </div>
           <div className="space-y-2">
             <div>
