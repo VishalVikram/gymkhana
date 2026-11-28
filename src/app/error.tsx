@@ -16,9 +16,31 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  // After a redeploy, an old page can request JS chunks that no longer exist.
+  // A full reload fetches the new build; auto-reload once per tab to avoid loops.
+  const isChunkError =
+    error?.name === "ChunkLoadError" || /Loading chunk|Failed to load chunk/i.test(error?.message ?? "");
+
   useEffect(() => {
     logger.error("App error:", error as Error);
-  }, [error]);
+    if (!isChunkError) return;
+    try {
+      if (sessionStorage.getItem("chunk-reloaded") !== "1") {
+        sessionStorage.setItem("chunk-reloaded", "1");
+        window.location.reload();
+      }
+    } catch {
+      window.location.reload();
+    }
+  }, [error, isChunkError]);
+
+  const handleRetry = () => {
+    if (isChunkError) {
+      window.location.reload();
+    } else {
+      reset();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center p-4">
@@ -48,7 +70,7 @@ export default function Error({
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               variant="destructive"
-              onClick={reset}
+              onClick={handleRetry}
               className="gap-2"
             >
               <RefreshCw className="h-4 w-4" />
