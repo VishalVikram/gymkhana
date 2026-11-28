@@ -9,10 +9,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-/* Bhoomi Fitness brand (from bhoomifitness website / Instagram) */
+/* Bhoomi Fitness brand: logo orange #FB5D05 + blue #0E70F7 on black (Instagram logo) */
 const GYM = {
   name: "Bhoomi Fitness",
-  tagline: "Strength isn't given. It's earned.",
   location: "Near Shirke Circle",
   phone: "9900010109",
 };
@@ -33,19 +32,24 @@ function getSafeCallbackUrl(url: string | null): string {
   return defaultUrl;
 }
 
-function Wordmark({ size = "md" }: { size?: "md" | "lg" }) {
-  const box = size === "lg" ? "h-12 w-12 text-2xl" : "h-10 w-10 text-xl";
+function Wordmark() {
   return (
     <div className="flex items-center gap-3">
-      <div
-        className={`${box} flex items-center justify-center rounded-xl border border-[#C5A059]/60 bg-[#C5A059]/10 font-extrabold text-[#E8D3A2]`}
-        aria-hidden
-      >
-        B
-      </div>
+      <Image
+        src="/brand/bhoomi-logo.png"
+        alt="Bhoomi Fitness logo"
+        width={52}
+        height={52}
+        priority
+        className="h-[52px] w-[52px] rounded-full ring-1 ring-white/15"
+      />
       <div className="leading-none">
-        <div className="text-lg font-extrabold tracking-[0.18em] text-white">BHOOMI</div>
-        <div className="mt-1 text-[11px] font-semibold tracking-[0.42em] text-[#C5A059]">FITNESS</div>
+        <div className="text-lg font-extrabold tracking-[0.14em] text-white">
+          BHOOMI <span className="text-[#FB5D05]">FITNESS</span>
+        </div>
+        <div className="mt-1.5 text-[11px] font-medium tracking-wide text-white/55">
+          ಭೂಮಿ ಫಿಟ್ನೆಸ್ · BENGALURU
+        </div>
       </div>
     </div>
   );
@@ -90,7 +94,7 @@ function LoginForm() {
   };
 
   const inputClass =
-    "h-12 bg-white/[0.04] border-white/10 text-white placeholder:text-white/30 rounded-xl focus-visible:border-[#C5A059]/60 focus-visible:ring-[#C5A059]/25";
+    "h-12 bg-white/[0.04] border-white/10 text-white placeholder:text-white/30 rounded-xl focus-visible:border-[#0E70F7]/70 focus-visible:ring-[#0E70F7]/30";
 
   return (
     <div className="min-h-screen bg-[#050608] text-white lg:grid lg:grid-cols-[1.15fr_1fr]">
@@ -110,16 +114,21 @@ function LoginForm() {
         <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-10">
           <Wordmark />
           <div className="hidden max-w-md lg:block">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5A059]">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#FB5D05]">
               Staff portal
             </p>
-            <h2 className="text-4xl font-extrabold leading-tight tracking-tight">{GYM.tagline}</h2>
+            <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
+              Strength isn&apos;t given.{" "}
+              <span className="bg-gradient-to-r from-[#FB5D05] to-[#0E70F7] bg-clip-text text-transparent">
+                It&apos;s earned.
+              </span>
+            </h2>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/65">
               <span className="inline-flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[#C5A059]" /> {GYM.location}
+                <MapPin className="h-4 w-4 text-[#FB5D05]" /> {GYM.location}
               </span>
               <a href={`tel:${GYM.phone}`} className="inline-flex items-center gap-2 hover:text-white">
-                <Phone className="h-4 w-4 text-[#C5A059]" /> {GYM.phone}
+                <Phone className="h-4 w-4 text-[#4C94FF]" /> {GYM.phone}
               </a>
             </div>
           </div>
@@ -168,7 +177,7 @@ function LoginForm() {
                 <button
                   type="button"
                   onClick={() => setShowForgot((v) => !v)}
-                  className="rounded text-xs text-[#C5A059] transition-colors hover:text-[#E8D3A2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]/50"
+                  className="rounded text-xs text-[#4C94FF] transition-colors hover:text-[#8DB9FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E70F7]/60"
                   aria-expanded={showForgot}
                   aria-controls="forgot-help"
                 >
@@ -194,7 +203,7 @@ function LoginForm() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-md text-white/40 transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]/50"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-md text-white/40 transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E70F7]/60"
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -203,7 +212,7 @@ function LoginForm() {
               {showForgot && (
                 <p
                   id="forgot-help"
-                  className="rounded-lg border border-[#C5A059]/25 bg-[#C5A059]/10 px-3 py-2 text-xs text-[#E8D3A2]"
+                  className="rounded-lg border border-[#0E70F7]/30 bg-[#0E70F7]/10 px-3 py-2 text-xs text-[#B7D2FF]"
                 >
                   Ask the gym admin to reset your password from Settings → Team &amp; access.
                 </p>
@@ -215,7 +224,7 @@ function LoginForm() {
                 id="remember"
                 checked={rememberMe}
                 onCheckedChange={(v) => setRememberMe(v === true)}
-                className="border-white/30 bg-white/5 data-[state=checked]:border-[#C5A059] data-[state=checked]:bg-[#C5A059] data-[state=checked]:text-black"
+                className="border-white/30 bg-white/5 data-[state=checked]:border-[#FB5D05] data-[state=checked]:bg-[#FB5D05] data-[state=checked]:text-black"
               />
               <Label htmlFor="remember" className="cursor-pointer text-sm text-white/60">
                 Keep me signed in on this device
@@ -235,7 +244,7 @@ function LoginForm() {
             <button
               type="submit"
               disabled={isLoading}
-              className="flex h-12 w-full items-center justify-center rounded-xl bg-[#C5A059] font-semibold text-[#050608] shadow-lg shadow-[#C5A059]/20 transition-colors hover:bg-[#d4b170] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8D3A2] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050608] disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex h-12 w-full items-center justify-center rounded-xl bg-[#FB5D05] font-semibold text-[#050608] shadow-lg shadow-[#FB5D05]/25 transition-colors hover:bg-[#FF7426] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E70F7] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050608] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isLoading ? (
                 <>
@@ -251,10 +260,10 @@ function LoginForm() {
           {/* Gym contact (mobile; desktop shows it on the photo) */}
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/50 lg:hidden">
             <span className="inline-flex items-center gap-1.5">
-              <MapPin className="h-3.5 w-3.5 text-[#C5A059]" /> {GYM.location}
+              <MapPin className="h-3.5 w-3.5 text-[#FB5D05]" /> {GYM.location}
             </span>
             <a href={`tel:${GYM.phone}`} className="inline-flex items-center gap-1.5 hover:text-white">
-              <Phone className="h-3.5 w-3.5 text-[#C5A059]" /> {GYM.phone}
+              <Phone className="h-3.5 w-3.5 text-[#4C94FF]" /> {GYM.phone}
             </a>
           </div>
         </div>
@@ -272,7 +281,7 @@ export default function LoginPage() {
     <Suspense
       fallback={
         <div className="flex min-h-screen items-center justify-center bg-[#050608]">
-          <Loader2 className="h-6 w-6 animate-spin text-[#C5A059]" />
+          <Loader2 className="h-6 w-6 animate-spin text-[#FB5D05]" />
         </div>
       }
     >

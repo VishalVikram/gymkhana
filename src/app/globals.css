@@ -26,6 +26,8 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+  --color-brand-blue: hsl(var(--brand-blue));
+  --color-brand-blue-foreground: hsl(var(--brand-blue-foreground));
   /* Sidebar theme tokens */
   --color-sidebar: hsl(var(--sidebar-background));
   --color-sidebar-foreground: hsl(var(--sidebar-foreground));
@@ -39,65 +41,70 @@
 
 :root {
   --radius: 0.5rem;
-  /* Bhoomi Fitness - light mode (white surfaces, deep-gold accents for contrast) */
-  --sidebar-background: 40 20% 98%;
-  --sidebar-foreground: 225 23% 8%;
-  --sidebar-primary: 38 55% 36%;
+  /* Bhoomi Fitness - light mode. Logo colours: orange #FB5D05, blue #0E70F7.
+     Deeper shades here so text-on-white and white-on-colour stay readable. */
+  --brand-blue: 215 90% 44%;
+  --brand-blue-foreground: 0 0% 100%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 220 15% 8%;
+  --sidebar-primary: 20 95% 40%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 40 30% 93%;
-  --sidebar-accent-foreground: 225 23% 8%;
-  --sidebar-border: 40 15% 88%;
-  --sidebar-ring: 38 55% 36%;
+  --sidebar-accent: 22 90% 95%;
+  --sidebar-accent-foreground: 220 15% 8%;
+  --sidebar-border: 220 13% 90%;
+  --sidebar-ring: 215 90% 44%;
   --background: 0 0% 100%;
-  --foreground: 225 23% 8%;
+  --foreground: 220 15% 8%;
   --card: 0 0% 100%;
-  --card-foreground: 225 23% 8%;
+  --card-foreground: 220 15% 8%;
   --popover: 0 0% 100%;
-  --popover-foreground: 225 23% 8%;
-  --primary: 38 55% 36%;
+  --popover-foreground: 220 15% 8%;
+  --primary: 20 95% 40%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 40 25% 95%;
-  --secondary-foreground: 225 23% 8%;
-  --muted: 40 20% 96%;
-  --muted-foreground: 225 8% 40%;
-  --accent: 40 30% 93%;
-  --accent-foreground: 225 23% 8%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 15% 8%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 40%;
+  --accent: 22 90% 95%;
+  --accent-foreground: 220 15% 8%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 40 15% 88%;
-  --input: 40 15% 85%;
-  --ring: 38 55% 36%;
+  --border: 220 13% 90%;
+  --input: 220 13% 87%;
+  --ring: 215 90% 44%;
 }
 
 .dark {
-  /* Bhoomi Fitness - brand black (#050608 family) with gold (#C5A059) */
-  --sidebar-background: 225 23% 4%;
-  --sidebar-foreground: 40 20% 96%;
-  --sidebar-primary: 39 48% 56%;
-  --sidebar-primary-foreground: 225 23% 3%;
-  --sidebar-accent: 224 22% 10%;
-  --sidebar-accent-foreground: 40 45% 86%;
-  --sidebar-border: 224 16% 13%;
-  --sidebar-ring: 39 48% 56%;
-  --background: 225 23% 5%;
-  --foreground: 40 20% 96%;
-  --card: 223 24% 8%;
-  --card-foreground: 40 20% 96%;
-  --popover: 223 24% 9%;
-  --popover-foreground: 40 20% 96%;
-  --primary: 39 48% 56%;
-  --primary-foreground: 225 23% 3%;
-  --secondary: 224 22% 12%;
-  --secondary-foreground: 40 20% 96%;
-  --muted: 224 22% 11%;
-  --muted-foreground: 222 10% 68%;
-  --accent: 224 22% 12%;
-  --accent-foreground: 40 20% 96%;
+  /* Bhoomi Fitness - black with logo orange (primary) and logo blue (accent) */
+  --brand-blue: 215 94% 55%;
+  --brand-blue-foreground: 0 0% 100%;
+  --sidebar-background: 220 15% 4%;
+  --sidebar-foreground: 0 0% 96%;
+  --sidebar-primary: 21 97% 51%;
+  --sidebar-primary-foreground: 0 0% 4%;
+  --sidebar-accent: 220 13% 10%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-border: 220 12% 13%;
+  --sidebar-ring: 215 94% 55%;
+  --background: 220 15% 5%;
+  --foreground: 0 0% 96%;
+  --card: 220 13% 8%;
+  --card-foreground: 0 0% 96%;
+  --popover: 220 13% 9%;
+  --popover-foreground: 0 0% 96%;
+  --primary: 21 97% 51%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 220 13% 12%;
+  --secondary-foreground: 0 0% 96%;
+  --muted: 220 13% 11%;
+  --muted-foreground: 220 9% 68%;
+  --accent: 220 13% 12%;
+  --accent-foreground: 0 0% 96%;
   --destructive: 0 62.8% 45%;
   --destructive-foreground: 0 0% 98%;
-  --border: 224 16% 17%;
-  --input: 224 16% 19%;
-  --ring: 39 48% 56%;
+  --border: 220 12% 17%;
+  --input: 220 12% 19%;
+  --ring: 215 94% 55%;
 }
 
 @layer base {

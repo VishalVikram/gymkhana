@@ -301,7 +301,7 @@ export default async function DashboardPage() {
       <div className="space-y-6">
         {/* Total Collection */}
         {stats.paymentStats?.totalFrom2023 && (
-          <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-gradient-to-br from-primary to-brand-blue text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-shadow">
             <CardContent className="pt-6 pb-6">
               <div className="flex items-center justify-between">
                 <div className="space-y-2">

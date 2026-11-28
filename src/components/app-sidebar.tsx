@@ -26,6 +26,7 @@ import {
   History,
   Megaphone,
 } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useSession } from "next-auth/react"
 import { usePathname } from "next/navigation"
@@ -251,12 +252,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/dashboard">
-                <div
-                  className="flex aspect-square size-8 items-center justify-center rounded-lg border border-primary/60 bg-primary/10 text-sm font-extrabold text-primary"
-                  aria-hidden
-                >
-                  {APP_NAME.trim().charAt(0).toUpperCase()}
-                </div>
+                <Image
+                  src="/brand/bhoomi-logo.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="aspect-square size-8 rounded-full ring-1 ring-sidebar-border"
+                />
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">{APP_NAME}</span>
                   <span className="truncate text-xs">{APP_TAGLINE}</span>
